@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>KL University</title>
+</head>
+
+<body bgcolor="lightyellow">
+
+    <marquee behavior="alternate" direction="right">
+        <h1>🎓 Welcome to KL University 🎓</h1>
+    </marquee>
+
+    <hr>
+
+    <center>
+        <img src="https://www.kluniversity.in/images/klu-logo.png"
+             alt="KL University Logo"
+             width="200"
+             height="200">
+
+        <h2>KL Deemed to be University</h2>
+        <h3>Vaddeswaram, Andhra Pradesh</h3>
+    </center>
+
+    
+
+</body>
+</html>
