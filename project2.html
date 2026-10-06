@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopGenius AI</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f5f5f5;
+}
+
+header{
+background:#0f172a;
+color:white;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:15px;
+font-size:18px;
+}
+
+nav a:hover{
+color:orange;
+}
+
+.search input{
+padding:10px;
+width:250px;
+border-radius:20px;
+border:none;
+}
+
+.search button{
+padding:10px 18px;
+border:none;
+background:orange;
+color:white;
+border-radius:20px;
+cursor:pointer;
+}
+
+.hero{
+display:flex;
+justify-content:space-around;
+align-items:center;
+padding:60px;
+background:linear-gradient(90deg,#2563eb,#38bdf8);
+color:white;
+}
+
+.hero img{
+width:450px;
+border-radius:20px;
+}
+
+.hero h1{
+font-size:50px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:20px;
+}
+
+.hero button{
+padding:15px 30px;
+background:orange;
+border:none;
+border-radius:10px;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+section{
+padding:50px;
+}
+
+.title{
+text-align:center;
+font-size:35px;
+margin-bottom:30px;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+}
+
+.card{
+background:white;
+width:180px;
+padding:20px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px gray;
+}
+
+.card:hover{
+transform:translateY(-8px);
+transition:.3s;
+}
+
+.card img{
+width:90px;
+height:90px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+🛍 ShopGenius AI
+</div>
+
+<nav>
+
+<a href="#">Home</a>
+<a href="#">Products</a>
+<a href="#">Categories</a>
+<a href="#">Offers</a>
+<a href="#">Contact</a>
+
+</nav>
+
+<div class="search">
+
+<input type="text" placeholder="Search Products">
+
+<button>
+Search
+</button>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Smart Shopping With AI</h1>
+
+<p>
+
+Discover thousands of products with
+AI recommendations.
+
+</p>
+
+<button>
+
+Shop Now
+
+</button>
+
+</div>
+
+<div>
+
+<img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=700">
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="title">
+
+Shop By Categories
+
+</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://cdn-icons-png.flaticon.com/512/1041/1041884.png">
+
+<h3>Mobiles</h3>
+
+</div>
+
+<div class="card">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3063/3063822.png">
+
+<h3>Laptops</h3>
+
+</div>
+
+<div class="card">
+
+<img src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png">
+
+<h3>Fashion</h3>
+
+</div>
+
+<div class="card">
+
+<img src="https://cdn-icons-png.flaticon.com/512/869/869636.png">
+
+<h3>Shoes</h3>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= FEATURED PRODUCTS ================= -->
+
+<section>
+
+<h2 class="title">🔥 Featured Products</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400">
+<h3>Nike Shoes</h3>
+<p>⭐⭐⭐⭐⭐</p>
+<h3 style="color:green;">₹3,999</h3>
+<button onclick="addCart()">Add To Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400">
+<h3>iPhone 15</h3>
+<p>⭐⭐⭐⭐⭐</p>
+<h3 style="color:green;">₹79,999</h3>
+<button onclick="addCart()">Add To Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1517336714739-489689fd1ca8?w=400">
+<h3>MacBook Air</h3>
+<p>⭐⭐⭐⭐⭐</p>
+<h3 style="color:green;">₹1,09,999</h3>
+<button onclick="addCart()">Add To Cart</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400">
+<h3>Headphones</h3>
+<p>⭐⭐⭐⭐☆</p>
+<h3 style="color:green;">₹2,499</h3>
+<button onclick="addCart()">Add To Cart</button>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= TODAY'S DEALS ================= -->
+
+<section style="background:#2563eb;color:white;text-align:center;">
+
+<h1>🎉 Today's Mega Sale</h1>
+
+<br>
+
+<h2>Up To 70% OFF</h2>
+
+<br>
+
+<p>Electronics • Fashion • Shoes • Watches</p>
+
+<br>
+
+<button style="padding:15px 30px;background:orange;border:none;color:white;font-size:18px;border-radius:10px;">
+Shop Now
+</button>
+
+</section>
+
+<!-- ================= WHY CHOOSE US ================= -->
+
+<section>
+
+<h2 class="title">Why Choose ShopGenius AI?</h2>
+
+<div class="cards">
+
+<div class="card">
+<h1>🚚</h1>
+<h3>Free Delivery</h3>
+<p>Fast delivery across India.</p>
+</div>
+
+<div class="card">
+<h1>💳</h1>
+<h3>Secure Payment</h3>
+<p>100% Safe & Secure Payments.</p>
+</div>
+
+<div class="card">
+<h1>🔄</h1>
+<h3>Easy Returns</h3>
+<p>7-Day Easy Return Policy.</p>
+</div>
+
+<div class="card">
+<h1>📞</h1>
+<h3>24×7 Support</h3>
+<p>Customer support anytime.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= AI SEARCH ================= -->
+
+<section style="text-align:center;background:#eef5ff;">
+
+<h2>🤖 AI Shopping Assistant</h2>
+
+<br>
+
+<input
+type="text"
+id="question"
+placeholder="Ask AI (Example: Best Shoes)"
+style="padding:12px;width:350px;">
+
+<button onclick="replyAI()"
+style="padding:12px 20px;background:#2563eb;color:white;border:none;">
+Ask
+</button>
+
+<br><br>
+
+<h3 id="answer"></h3>
+
+</section>
+
+<script>
+
+function addCart(){
+alert("✅ Product Added Successfully!");
+}
+
+function replyAI(){
+
+let q=document.getElementById("question").value.toLowerCase();
+
+let ans="";
+
+if(q.includes("shoe"))
+ans="👟 Recommended: Nike Air Max - ₹3,999";
+
+else if(q.includes("phone"))
+ans="📱 Recommended: iPhone 15 - ₹79,999";
+
+else if(q.includes("laptop"))
+ans="💻 Recommended: MacBook Air - ₹1,09,999";
+
+else if(q.includes("headphone"))
+ans="🎧 Recommended: Sony Headphones - ₹2,499";
+
+else
+ans="🤖 Please ask about Shoes, Phones, Laptops or Headphones.";
+
+document.getElementById("answer").innerHTML=ans;
+
+}
+
+</script>
+<!-- ================= CUSTOMER REVIEWS ================= -->
+
+<section>
+
+<h2 class="title">⭐ Customer Reviews</h2>
+
+<div class="cards">
+
+<div class="card">
+<h2>Rahul</h2>
+<p>⭐⭐⭐⭐⭐</p>
+<p>"Amazing shopping experience. Fast delivery and excellent quality!"</p>
+</div>
+
+<div class="card">
+<h2>Priya</h2>
+<p>⭐⭐⭐⭐⭐</p>
+<p>"The AI assistant recommended the perfect phone for me."</p>
+</div>
+
+<div class="card">
+<h2>Sai</h2>
+<p>⭐⭐⭐⭐☆</p>
+<p>"Beautiful website with easy navigation and great offers."</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= WEBSITE STATS ================= -->
+
+<section style="background:#1e3a8a;color:white;text-align:center;">
+
+<h2>📊 Our Achievements</h2>
+
+<br>
+
+<div style="display:flex;justify-content:space-around;flex-wrap:wrap;">
+
+<div>
+<h1>10K+</h1>
+<p>Happy Customers</p>
+</div>
+
+<div>
+<h1>500+</h1>
+<p>Products</p>
+</div>
+
+<div>
+<h1>150+</h1>
+<p>Brands</p>
+</div>
+
+<div>
+<h1>4.9★</h1>
+<p>Customer Rating</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= NEWSLETTER ================= -->
+
+<section style="text-align:center;">
+
+<h2>📧 Subscribe to Newsletter</h2>
+
+<br>
+
+<input
+type="email"
+placeholder="Enter Your Email"
+style="padding:12px;width:320px;">
+
+<button
+style="padding:12px 25px;background:#2563eb;color:white;border:none;">
+Subscribe
+</button>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section style="background:#eef5ff;text-align:center;">
+
+<h2>📞 Contact Us</h2>
+
+<p>Email : support@shopgenius.com</p>
+
+<p>Phone : +91 9876543210</p>
+
+<p>Address : Vijayawada, Andhra Pradesh</p>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer style="background:#0f172a;color:white;padding:40px;text-align:center;">
+
+<h2>🛍 ShopGenius AI</h2>
+
+<br>
+
+<p>Your Smart Shopping Partner</p>
+
+<br>
+
+<p>
+
+Home |
+
+Products |
+
+Offers |
+
+Contact |
+
+Privacy Policy
+
+</p>
+
+<br>
+
+<p>
+
+Follow Us
+
+</p>
+
+<h2>
+
+📘 📷 🐦 ▶️
+
+</h2>
+
+<br>
+
+<p>
+
+© 2026 ShopGenius AI. All Rights Reserved.
+
+</p>
+
+</footer>
+
+<!-- ================= DARK MODE ================= -->
+
+<div style="position:fixed;bottom:20px;left:20px;">
+
+<button onclick="darkMode()"
+style="padding:12px;border:none;border-radius:50%;font-size:22px;">
+🌙
+</button>
+
+</div>
+
+<script>
+
+function darkMode(){
+
+document.body.classList.toggle("dark");
+
+}
+
+</script>
+
+<style>
+
+.dark{
+background:#111;
+color:white;
+}
+
+.dark .card{
+background:#222;
+color:white;
+}
+
+.dark section{
+background:#111 !important;
+color:white !important;
+}
+
+</style>
+
+</body>
+</html>
